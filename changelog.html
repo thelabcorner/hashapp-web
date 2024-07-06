@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>HashAPP&trade; | Changelog</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/hashapp-web/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <a class="navbar-brand" href="/hashapp-web/">
+            <img src="/hashapp-web/assets/PressWhite.svg" alt="White Press" class="brand-image" style="width: 50px;opacity: .9">
+            HashAPP&trade;
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="/hashapp-web/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/hashapp-web/team">Team</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/hashapp-web/changelog">Changelog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!"></a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-6 fw-bolder text-white mb-2">Changelog</h1>
+                    <p class="lead text-white-50 mb-4">Stay up to date with the latest changes to HashAPP&trade;</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a class="btn btn-outline-light  btn-lg px-4 me-sm-3" href="#features">Login</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Changelog section updated -->
+<section class="py-5" id="changelog">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+
+        </div>
+        <div class="row gx-5 row-cols-1 justify-content-center">
+            <!-- Latest Update -->
+            <div class="col mb-5">
+                <h5 class="fw-bolder">Version 0.0.6.7a</h5> <i class="commit-date" data-date="2024-07-04"></i>
+                <ul>
+                    <li>Enhanced the manage-wash.html page for a smoother user interface.</li>
+                    <li>Implemented the HTTP 418 I'm a teapot status code as an Easter egg.</li>
+                    <li>Added session inactivity redirection for logged-in pages.</li>
+                </ul>
+            </div>
+            <!-- Previous Updates -->
+            <div class="col mb-5">
+                <h5 class="fw-bolder">Version 0.0.6.5a</h5> <i class="commit-date" data-date="2024-07-03"></i>
+                <ul>
+                    <li>Initiated a redesign of manage-wash, manage-freezedry, and manage-press pages for consistent layout and design.</li>
+                    <li>Improved URL parsing for batch IDs.</li>
+                    <li>Removed unused imports and files.</li>
+                    <li>Implemented a 30-minute session timeout for inactivity.</li>
+                    <li>Introduced custom 404 error pages.</li>
+                </ul>
+            </div>
+            <div class="col mb-5">
+                <h5 class="fw-bolder">Version 0.0.6a</h5> <i class="commit-date" data-date="2024-07-03"></i>
+                <ul>
+                    <li>Updated the washbag selector to populate the wash_bags_micron hidden input automatically.</li>
+                    <li>Started development of the batch management page with dynamic batch creation and population.</li>
+                    <li>Transitioned batch IDs from integers to strings in models and routes.</li>
+                    <li>Began the development of freezedry and press management pages, including artwork.</li>
+                    <li>Adjusted sidebar tree elements for better indentation.</li>
+                </ul>
+            </div>
+            <div class="col mb-5">
+                <h5 class="fw-bolder">Version 0.0.5a</h5> <i class="commit-date" data-date="2024-06-27"></i>
+                <ul>
+                    <li>Enhanced the plant inventory interface with new strain selectors and required field indicators.</li>
+                    <li>Improved code readability for the genetic database JavaScript and HTML.</li>
+                </ul>
+            </div>
+            <div class="col mb-5">
+                <h5 class="fw-bolder">Version 0.0.4a</h5> <i class="commit-date" data-date="2024-06-17"></i>
+                <ul>
+                    <li>Updated README.md with the latest project information.</li>
+                </ul>
+            </div>
+            <div class="col mb-5">
+                <h5 class="fw-bolder">Version 0.0.4</h5> <i class="commit-date" data-date="2024-06-17"></i>
+                <ul>
+                    <li>General improvements and minor updates.</li>
+                </ul>
+            </div>
+            <!-- Initial Commits -->
+            <div class="col mb-5">
+                <h5 class="fw-bolder">Initial Commits</h5> <i class="commit-date" data-date="2024-06-14"></i>
+                <ul>
+                    <li>Added wpff_inventory.html and wpff_inventory.py.</li>
+                    <li>Laid the groundwork for the project's development.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function updateDates() {
+        const commitElements = document.querySelectorAll('.commit-date');
+        const now = new Date();
+
+        commitElements.forEach((element) => {
+            const commitDate = new Date(element.dataset.date);
+            const diffTime = Math.abs(now - commitDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            let dateString;
+            if (diffDays === 0) {
+                dateString = "Committed today";
+            } else if (diffDays === 1) {
+                dateString = "Committed yesterday";
+            } else if (diffDays < 7) {
+                dateString = `Committed ${diffDays} days ago`;
+            } else if (diffDays < 14) {
+                dateString = "Committed last week";
+            } else if (diffDays < 30) {
+                dateString = "Committed 3 weeks ago";
+            } else {
+                dateString = `Committed on ${commitDate.toLocaleDateString()}`;
+            }
+
+            element.textContent = dateString;
+        });
+    }
+
+    // Call the function when the page loads
+    window.onload = updateDates;
+</script>
+
+
+
+
+
+
+<!-- Footer-->
+<footer class="container py-5" style="background-color: #1e2125; text-align: center; max-width: 100% !important">
+    <div class="row">
+        <div class="col-4 col-md">
+            <small class="d-block mb-3 text-muted">&copy;2024 - TheLabCorner&trade;</small>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
+
+</body>
+</html>
