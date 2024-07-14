@@ -100,7 +100,7 @@ hashapp@thedabcorner.site
 <script>
     async function fetchCommitLog() {
         try {
-            const response = await fetch('/commit-log/commit-log.yml');
+            const response = await fetch('/hashapp-web/commit-log/commit-log.yml');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
