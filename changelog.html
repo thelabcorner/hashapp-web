@@ -89,7 +89,8 @@ hashapp@thedabcorner.site
 <section class="py-5" id="changelog">
     <div class="container px-5 my-5">
         <div class="text-center mb-5">
-            <h2 class="fw-bolder">Changelog</h2>
+            <h2 class="fw-bolder">Recent Commits</h2>
+            <h4 class="text-muted"></h4>
         </div>
         <div id="changelog-entries" class="row gx-5 row-cols-1 justify-content-center">
             <!-- Changelog entries will be populated here -->
@@ -154,7 +155,7 @@ hashapp@thedabcorner.site
 
         const versionHeader = document.createElement('h5');
         versionHeader.classList.add('fw-bolder');
-        versionHeader.textContent = `Version ${commit.title}`;
+        versionHeader.textContent = `${commit.title}`;
 
         const dateInfo = document.createElement('i');
         dateInfo.classList.add('commit-date');
