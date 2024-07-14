@@ -1,37 +1,81 @@
 commit_log:
-  - date: "2024-07-13"
-    author: "Author Name"
-    title: "Initial Commit"
+  - date: "2024-7-13"
+    author: "thelabcorner"
+    title: "v0.0.7.1a"
     description: |
-      ---------------
-      Initial setup of the project.
-      Added README.md file.
-      ---------------
+      #-------------#
+      Updated HashAPP-Web (Homepage) to better depict the application's purpose & progress
+      Updated HashAPP-Web (Homepage) to include a "Changelog" section
+      Opened Alpha Testing Pre-Applications for HashAPP-Beta Release. Added form to Apply button on HashAPP-Web (Homepage)
+      #-------------#    
+    
+    
+    
 
-  - date: "2024-07-14"
-    author: "Author Name"
-    title: "Add feature X"
+  - date: "2024-07-10"
+    author: "thelabcorner"
+    title: "v0.0.7.1a"
     description: |
-      ---------------
-      Implemented feature X.
-      Added corresponding tests.
-      ---------------
-
-  # Add new commits below this line
-  - date: "2024-07-15"
-    author: "Author Name"
-    title: "Fix bug Y"
+      #-------------#
+      Begin implementing "Strain Finder" page, reformat sidebar from "Genetic Database" to "Genetics" treeview
+      Started implementing add-to-db function (strainfinder.html)
+      Created seedfinder_api.js for Third Party seedfinder.eu API
+      Updated wash route to use new UI
+      Began fixing HashAPP logo on sidebar for iOS
+      Added seedfinder_ID to genetic database model
+      Fixed washBagSelector.js bugs, ensuring deletion of bags updates selectors
+      Completely rewrote genetic-database.html to an inventory-like format
+      Updated "Create New Batch" modal on batch-tracker.html to be a paginated, more decorative setup
+      #-------------#
+  - date: "2024-07-03"
+    author: "thelabcorner"
+    title: "v0.0.6.7a"
     description: |
-      ---------------
-      Fixed bug Y related to feature X.
-      Updated documentation.
-      ---------------
-
-  - date: "YYYY-MM-DD"
-    author: "Author Name"
-    title: "Commit Title"
+      #-------------#
+      Updated manage-wash.html page for a more fluent user interface
+      Implemented session inactivity redirect on logged-in pages
+      #-------------#
+  - date: "2024-07-02"
+    author: "thelabcorner"
+    title: "v0.0.6.5a"
     description: |
-      ---------------
-      Commit description goes here.
-      Add more lines as needed.
-      ---------------
+      #-------------#
+      Began rewriting manage-wash, manage-freezedry, manage-press pages for consistent layout and design
+      Parsing batch IDs, etc. from URLs
+      Deleted unused imports/files
+      Implemented 30-minute inactive session timeout
+      Implemented custom 404-code pages
+      #-------------#
+  - date: "2024-06-27"
+    author: "thelabcorner"
+    title: "v0.0.6a"
+    description: |
+      #-------------#
+      Made washbag selector fill the wash_bags_micron hidden input
+      Began implementing batch management page, dynamic population + creation of batches (subject to change)
+      Updated batch models/routes for parsing/generating STRING batch IDs instead of INTEGERs
+      Began implementing freezedry and press management pages with corresponding artwork
+      Fixed sidebar tree elements to be indented
+      #-------------#
+  - date: "2024-06-27"
+    author: "thelabcorner"
+    title: "v0.0.5a"
+    description: |
+      #-------------#
+      Improved decoration for plant inventory, new strain selectors, indicated required fields, and modal prefilling based on selected items
+      Increased code legibility for genetic database JavaScript + HTML
+      #-------------#
+  - date: "2024-06-17"
+    author: "thelabcorner"
+    title: "v0.0.4a"
+    description: |
+      #-------------#
+      Updated README.md
+      #-------------#
+  - date: "2024-06-16"
+    author: "thelabcorner"
+    title: "v0.0.4"
+    description: |
+      #-------------#
+      Initial development clone commit from POC batch management, routes, and facility management page
+      #-------------#

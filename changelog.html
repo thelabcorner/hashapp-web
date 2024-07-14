@@ -45,6 +45,7 @@ hashapp@thedabcorner.site
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="/hashapp-web/css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.0.0/dist/js-yaml.min.js"></script>
 </head>
 <body>
 <!-- Responsive navbar-->
@@ -85,7 +86,6 @@ hashapp@thedabcorner.site
 </header>
 
 
-<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.0.0/dist/js-yaml.min.js"></script>
 <section class="py-5" id="changelog">
     <div class="container px-5 my-5">
         <div class="text-center mb-5">
@@ -100,21 +100,17 @@ hashapp@thedabcorner.site
 <script>
     async function fetchCommitLog() {
         try {
-            const response = await fetch('https://raw.githubusercontent.com/thelabcorner/hashapp-web/main/commit-log/commit-log.yml');
+            const response = await fetch('/commit-log/commit-log.yml');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             let yamlText = await response.text();
             console.log('Fetched commit log (raw text):', yamlText);
 
-            // Preprocess the YAML text to handle multiline strings
-            yamlText = yamlText.replace(/"\n\s+([^"])/g, '"\n  $1');
-            console.log('Processed YAML text:', yamlText);
-
             try {
                 const parsedLog = jsyaml.load(yamlText);
                 console.log('Parsed commit log:', parsedLog);
-                return parsedLog;
+                return parsedLog.commit_log; // Do not filter commits here
             } catch (yamlError) {
                 console.error('YAML parsing error:', yamlError);
                 throw yamlError;
@@ -158,14 +154,16 @@ hashapp@thedabcorner.site
 
         const versionHeader = document.createElement('h5');
         versionHeader.classList.add('fw-bolder');
-        versionHeader.textContent = `Version ${commit.message}`;
+        versionHeader.textContent = `Version ${commit.title}`;
 
         const dateInfo = document.createElement('i');
         dateInfo.classList.add('commit-date');
         dateInfo.textContent = formatDate(commit.date);
 
         const descriptionList = document.createElement('ul');
-        const descriptions = commit.description ? commit.description.split('\n').map(line => line.trim()).filter(line => line) : ['No description provided'];
+        const descriptions = commit.description
+            ? commit.description.split('\n').map(line => line.trim()).filter(line => line && line !== '#-------------#')
+            : ['No description provided'];
         descriptions.forEach(descriptionItem => {
             const listItem = document.createElement('li');
             listItem.textContent = descriptionItem;
@@ -191,6 +189,7 @@ hashapp@thedabcorner.site
     }
 
     window.onload = populateChangelog;
+
 </script>
 
 
