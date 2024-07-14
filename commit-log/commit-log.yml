@@ -1,0 +1,37 @@
+commit_log:
+  - date: "2024-07-13"
+    author: "Author Name"
+    title: "Initial Commit"
+    description: |
+      ---------------
+      Initial setup of the project.
+      Added README.md file.
+      ---------------
+
+  - date: "2024-07-14"
+    author: "Author Name"
+    title: "Add feature X"
+    description: |
+      ---------------
+      Implemented feature X.
+      Added corresponding tests.
+      ---------------
+
+  # Add new commits below this line
+  - date: "2024-07-15"
+    author: "Author Name"
+    title: "Fix bug Y"
+    description: |
+      ---------------
+      Fixed bug Y related to feature X.
+      Updated documentation.
+      ---------------
+
+  - date: "YYYY-MM-DD"
+    author: "Author Name"
+    title: "Commit Title"
+    description: |
+      ---------------
+      Commit description goes here.
+      Add more lines as needed.
+      ---------------
