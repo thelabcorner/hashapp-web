@@ -52,6 +52,12 @@ hashapp@thedabcorner.site
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+        <style>
+            body {
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+        </style>
+
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -127,6 +133,53 @@ hashapp@thedabcorner.site
         </section>
 
 
+        <style>
+            .accordion-button {
+                background-color: #333;
+                color: #fff;
+                border: none;
+                transition: background-color 0.3s ease;
+            }
+
+            .accordion-button:hover {
+                background-color: #555;
+            }
+
+            .accordion-button:not(.collapsed) {
+                color: #fff;
+                background-color: #555 !important;
+            }
+
+            .accordion-button::after {
+                flex-shrink: 0;
+                width: var(--bs-accordion-btn-icon-width);
+                height: var(--bs-accordion-btn-icon-width);
+                margin-left: auto;
+                content: "";
+                background-image: var(--bs-accordion-btn-icon);
+                background-repeat: no-repeat;
+                background-size: var(--bs-accordion-btn-icon-width);
+                transition: var(--bs-accordion-btn-icon-transition);
+                filter: brightness(0) invert(1);
+            }
+
+
+
+            .accordion-item {
+                border: none;
+                margin-bottom: 1.5rem;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .accordion-body {
+                background: linear-gradient(135deg, #f5f5f5 0%, #e9e9e9 100%);
+                padding: 2rem;
+                border-top: 1px solid #ddd;
+            }
+        </style>
+
 
         <section id="faq" class="py-5 bg-light">
             <div class="container px-5 my-5">
@@ -140,8 +193,213 @@ hashapp@thedabcorner.site
 
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
+                                    <button class="accordion-button custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#howItWorks">
+                                        <i class="fas fa-question-circle">&nbsp;&nbsp;&nbsp;</i> How does HashAPP™ work?
+                                    </button>
+                                </h3>
+                                <div id="howItWorks" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p class="lead">HashAPP™ streamlines your solventless hash production process through these essential features:</p>
+
+                                        <div class="hashapp-workflow">
+                                            <div class="workflow-row">
+                                                <div class="workflow-step genetic-database">
+                                                    <i class="fas fa-dna"></i>
+                                                    <h4>Genetic Database</h4>
+                                                    <p>Log strain information and import data directly from seedfinder.eu or create custom genetics. Analyze complex strain and batch relationships to optimize your selections.</p>
+                                                </div>
+                                                <div class="workflow-arrow">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </div>
+                                                <div class="workflow-step | cultivation">
+                                                    <i class="fas fa-seedling"></i>
+                                                    <h4>Cultivation</h4>
+                                                    <p>Record growth stages, nutrients, and environmental conditions.</p>
+                                                    <ul>
+                                                        <li>Seed/Clone</li>
+                                                        <li>Veg</li>
+                                                        <li>Flower</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="workflow-arrow">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </div>
+                                                <div class="workflow-step harvest-inventory">
+                                                    <i class="fas fa-weight"></i>
+                                                    <h4>Harvest Inventory</h4>
+                                                    <p>Add harvested biomass to the inventory and log phenotype-specific observations.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="workflow-row">
+                                                <div class="workflow-arrow-vertical">
+                                                    <i class="fas fa-arrow-down"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="workflow-row">
+                                                <div class="workflow-step | extraction">
+                                                    <i class="fas fa-water"></i>
+                                                    <h4>Extraction</h4>
+                                                    <p>Manage wash, freeze-dry, and weighing steps with precision.</p>
+                                                    <ul>
+                                                        <li>Wash</li>
+                                                        <li>Freeze-Dry</li>
+                                                        <li>Weigh</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="workflow-arrow">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </div>
+                                                <div class="workflow-step product-inventory">
+                                                    <i class="fas fa-box"></i>
+                                                    <h4>Product Inventory</h4>
+                                                    <p>Add dried hash and manage further processing, including creating new SKUs and blending micron ranges.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="workflow-row">
+                                                <div class="workflow-arrow-vertical">
+                                                    <i class="fas fa-arrow-down"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="workflow-row">
+                                                <div class="workflow-step post-processing">
+                                                    <i class="fas fa-tools"></i>
+                                                    <h4>Post Processing</h4>
+                                                    <p>Press, cure, and perform additional R&D steps. Record detailed parameters such as temperature and pressure during rosin pressing.</p>
+                                                </div>
+                                                <div class="workflow-arrow">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </div>
+                                                <div class="workflow-step batch-summary">
+                                                    <i class="fas fa-chart-bar"></i>
+                                                    <h4>Batch + Product Summary</h4>
+                                                    <p>Generate comprehensive summaries and aggregate data for future insights, including yield ratios, terpene profiles, and cross-batch analysis.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p class="hashapp-summary mt-4">
+                                            HashAPP™ guides you from genetic selection to final product, ensuring data-driven decisions every step of the way.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <style>
+                                .hashapp-workflow {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 1rem;
+                                }
+
+                                .workflow-row {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 1rem;
+                                }
+
+                                .workflow-step {
+                                    flex: 1;
+                                    background: #fff;
+                                    border-radius: 10px;
+                                    padding: 1rem;
+                                    text-align: center;
+                                    transition: all 0.3s ease;
+                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                }
+
+                                .workflow-arrow,
+                                .workflow-arrow-vertical {
+                                    flex: 0 0 auto;
+                                    font-size: 1.5rem;
+                                    color: #0c63e4;
+                                }
+
+                                .workflow-step i {
+                                    font-size: 2rem;
+                                    color: #0c63e4;
+                                    margin-bottom: 0.5rem;
+                                }
+
+                                .workflow-step h4 {
+                                    margin-bottom: 0.5rem;
+                                }
+
+                                .workflow-step p, .workflow-step ul {
+                                    font-size: 0.8rem;
+                                    color: #666;
+                                }
+
+                                .workflow-step ul {
+                                    list-style-type: none;
+                                    padding: 0;
+                                }
+
+                                .workflow-step li {
+                                    text-align: left;
+                                    padding-left: 1rem;
+                                    position: relative;
+                                }
+
+                                .workflow-step li::before {
+                                    content: "•";
+                                    position: absolute;
+                                    left: 0;
+                                    color: #0c63e4;
+                                }
+
+                                .workflow-step:hover {
+                                    background: #f0f0f0;
+                                    transform: translateY(-5px);
+                                }
+
+                                .hashapp-summary {
+                                    background: #0c63e4;
+                                    color: white;
+                                    padding: 1rem;
+                                    border-radius: 5px;
+                                    text-align: center;
+                                    margin-top: 1rem;
+                                }
+
+                                .genetic-database, .product-inventory {
+                                    background: #171717;
+                                    color: #F2F2F2;
+                                }
+
+                                .cultivation::before, .extraction::before {
+                                    content: attr(class);
+                                    text-transform: uppercase;
+                                    display: block;
+                                    background: #000000;
+                                    color: #FFFFFF;
+                                    padding: 0.2rem;
+                                    margin-bottom: 0.5rem;
+                                    font-size: 0.7rem;
+                                }
+
+                                @media (max-width: 768px) {
+                                    .workflow-row {
+                                        flex-direction: column;
+                                    }
+                                    .workflow-arrow,
+                                    .workflow-arrow-vertical {
+                                        display: none;
+                                    }
+                                }
+                            </style>
+
+
+
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#geneticDatabase">
-                                        <i class="fas fa-dna">&nbsp;</i> What is the genetic database?
+                                        <i class="fas fa-dna">&nbsp;&nbsp;&nbsp;</i> What is the genetic database?
                                     </button>
                                 </h3>
                                 <div id="geneticDatabase" class="accordion-collapse collapse show">
@@ -163,76 +421,13 @@ hashapp@thedabcorner.site
                                 </div>
                             </div>
 
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#howItWorks">
-                                        <i class="fas fa-cogs">&nbsp;</i>  So, how's it work?
-                                    </button>
-                                </h3>
-                                <div id="howItWorks" class="accordion-collapse collapse show">
-                                    <div class="accordion-body">
-                                        <p>Experience the streamlined efficiency of HashAPP™ as it transforms your journey from seed to concentrate in five pivotal steps, all while continuously enhancing your genetic database:</p>
-                                        <ol>
-                                            <li><strong>Genetic Database Mastery</strong>
-                                                <ul>
-                                                    <li>Input strain details manually (name, lineage, breeder)</li>
-                                                    <li>Utilize our seedfinder.eu integration for rapid strain import</li>
-                                                </ul>
-                                            </li>
-                                            <li><strong>Cultivation Monitoring</strong>
-                                                <ul>
-                                                    <li>Select genetics from your database for plant inventory</li>
-                                                    <li>Track each lifecycle stage: seed, clone, vegetative, flowering</li>
-                                                    <li>Log essential growth metrics, nutrient regimens, and environmental conditions</li>
-                                                </ul>
-                                            </li>
-                                            <li><strong>WPFF & Dry Harvesting</strong>
-                                                <ul>
-                                                    <li>Record harvest weights</li>
-                                                    <li>Note chemo/pheno-typic traits and observations</li>
-                                                    <li>Automatically update inventory & refine yield predictions for future cultivation cycles</li>
-                                                </ul>
-                                            </li>
-                                            <li><strong>Extraction Process Management</strong>
-                                                <ul>
-                                                    <li>Select Harvest inventory for extraction</li>
-                                                    <li>Navigate through each extraction stage:
-                                                        <ul>
-                                                            <li><strong>Ice Water Extraction:</strong> Control temperature, agitation, bag selection, and more</li>
-                                                            <li><strong>Lyophilization:</strong> Set cycle duration, final moisture content, and log unit variables</li>
-                                                            <li><strong>Rosin Pressing:</strong> Adjust temperature, pressure, duration, and yield</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>Each step enriches your genetic database, refining strain-specific extraction parameters and recommendations based on your historical data</li>
-                                                </ul>
-                                            </li>
-                                            <li><strong>Hash Inventory Optimization</strong>
-                                                <ul>
-                                                    <li>Create new SKUs and blend micron ranges</li>
-                                                    <li>Track post-processing R&D and iterations</li>
-                                                    <li>Generate comprehensive strain analytics and batch summaries</li>
-                                                    <li>Aggregate final product data against your genetic database, including:
-                                                        <ul>
-                                                            <li>Yield ratios and variances (WPFF to hash, hash to rosin)</li>
-                                                            <li>Terpene profile categorization</li>
-                                                            <li>Cross-batch analysis for process optimization</li>
-                                                            <li>Refined cultivation and processing recommendations</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <p>HashAPP™ meticulously captures data at every stage, seamlessly integrating new information into your genetic database. This enables you to conduct advanced searches and analyses, from identifying specific chemotypes to evaluating top-performing cultivars. With HashAPP™, you'll possess the insights and control necessary to push the boundaries of concentrate production and quality.</p>
-                                    </div>
-                                </div>
-                            </div>
 
 
 
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yieldOptimization">
-                                        <i class="fas fa-magnifying-glass-chart">&nbsp;</i> How can HashAPP&trade; improve my yield?
+                                        <i class="fas fa-magnifying-glass-chart">&nbsp;&nbsp;&nbsp;</i> How can HashAPP&trade; improve my yield?
                                     </button>
                                 </h3>
                                 <div id="yieldOptimization" class="accordion-collapse collapse">
@@ -251,49 +446,50 @@ hashapp@thedabcorner.site
                             </div>
 
                             <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hashapp-comparison">
-                                        <i class="fas fa-balance-scale">&nbsp;</i> How does HashAPP™ compare to other platforms?
-                                    </button>
-                                </h3>
-                                <div id="hashapp-comparison" class="accordion-collapse collapse">
-                                    <div class="accordion-body">
-                                        <p class="lead">HashAPP™ is your comprehensive LIMS for solventless success, designed to elevate your entire extraction process.</p>
-                                        <div class="row mt-4">
-                                            <div class="col-md-6">
-                                                <h4><i class="fas fa-database"></i> Data Powerhouse</h4>
-                                                <p>We don't just track; we aggregate. Seamlessly combine insights from every phase of cultivation and extraction to elevate your decision-making to the next level.</p>
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hashapp-comparison">
+                                            <i class="fas fa-balance-scale">&nbsp;&nbsp;&nbsp;</i> How does HashAPP™ compare to other platforms?
+                                        </button>
+                                    </h3>
+                                    <div id="hashapp-comparison" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <p class="lead">HashAPP™ is your comprehensive LIMS for solventless success, designed to elevate your entire extraction process.</p>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <h4><i class="fas fa-database"></i> Data Powerhouse</h4>
+                                                    <p>We don't just track; we aggregate. Seamlessly combine insights from every phase of cultivation and extraction to elevate your decision-making to the next level.</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h4><i class="fas fa-seedling"></i> Seed-to-Rosin Integration</h4>
+                                                    <p>We're with you at every stage, from picking which genetics to run to curing out the final product, ensuring seamless data flow throughout your process.</p>
+                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <h4><i class="fas fa-seedling"></i> Seed-to-Rosin Integration</h4>
-                                                <p>We're with you at every stage, from picking which genetics to run to curing out the final product, ensuring seamless data flow throughout your process.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-6">
-                                                <h4><i class="fas fa-sliders-h"></i> Customization King</h4>
-                                                <p>From head squishers to trim team leads, every role gets a tailored view. The Facility Owner controls access, ensuring that each team member only sees what they need. HashAPP keeps everyone in their lane with precise, dialed-in access.</p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><i class="fas fa-chart-line"></i> Analytics that Matter</h4>
-                                                <p>Stop collecting wet spreadsheets, clunky excel tables, and static information. Unlock every insight possible for your solventless operation with HashAPP&trade;. Truly utilize your data to make aggregated predictions, streamline your processes, and maximize efficiency in every step of your production.</p>
-                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-6">
+                                                    <h4><i class="fas fa-sliders-h"></i> Customization King</h4>
+                                                    <p>From head squishers to trim team leads, every role gets a tailored view. The Facility Owner controls access, ensuring that each team member only sees what they need. HashAPP keeps everyone in their lane with precise, dialed-in access.</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h4><i class="fas fa-chart-line"></i> Analytics that Matter</h4>
+                                                    <p>Stop collecting wet spreadsheets, clunky excel tables, and static information. Unlock every insight possible for your solventless operation with HashAPP&trade;. Truly utilize your data to make aggregated predictions, streamline your processes, and maximize efficiency in every step of your production.</p>
+                                                </div>
 
 
-                                        <div class="row mt-3">
-                                            <div class="col-md-6">
-                                                <h4><i class="fas fa-flask"></i> Post-Processing Excellence</h4>
-                                                <p>Track R&D iterations, generate comprehensive strain analytics, and create detailed batch summaries to refine your products.</p>
+                                            <div class="row mt-3">
+                                                <div class="col-md-6">
+                                                    <h4><i class="fas fa-flask"></i> Post-Processing Excellence</h4>
+                                                    <p>Track R&D iterations, generate comprehensive strain analytics, and create detailed batch summaries to refine your products.</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h4><i class="fas fa-shield-alt"></i> Enterprise-Ready</h4>
+                                                    <p>Enjoy AES-256 bank-level security with user-friendly access across all devices, ensuring your data is safe and accessible.</p>
+                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <h4><i class="fas fa-shield-alt"></i> Enterprise-Ready</h4>
-                                                <p>Enjoy AES-256 bank-level security with user-friendly access across all devices, ensuring your data is safe and accessible.</p>
+                                            <div class="alert alert-info mt-4">
+                                                <p><strong>HashAPP™ is built for processors who seek comprehensive data management and actionable insights. Our platform grows with you, supporting your journey from startup to industry leader.</strong></p>
                                             </div>
+                                            <p class="mt-3">We're excited to be part of an innovative industry. Platforms like "Hashy.so" have paved the way, and we're here to offer the next level of integration and analytics for hardcore solventless operators.</p>
                                         </div>
-                                        <div class="alert alert-info mt-4">
-                                            <p><strong>HashAPP™ is built for processors who seek comprehensive data management and actionable insights. Our platform grows with you, supporting your journey from startup to industry leader.</strong></p>
-                                        </div>
-                                        <p class="mt-3">We're excited to be part of an innovative industry. Platforms like "Hashy.so" have paved the way, and we're here to offer the next level of integration and analytics for hardcore solventless operators.</p>
                                     </div>
                                 </div>
                             </div>
@@ -304,7 +500,7 @@ hashapp@thedabcorner.site
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#facilityExplained">
-                                        <i class="fas fa-warehouse">&nbsp;</i> What's a "Facility" in HashAPP and how does it elevate my hash operation?
+                                        <i class="fas fa-warehouse">&nbsp;&nbsp;&nbsp;</i> What's a "Facility" in HashAPP and how does it elevate my hash operation?
                                     </button>
                                 </h3>
                                 <div id="facilityExplained" class="accordion-collapse collapse">
@@ -388,7 +584,7 @@ hashapp@thedabcorner.site
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dataSecurity">
-                                        <i class="fas fa-lock">&nbsp;</i>How does HashAPP&trade; protect my data?
+                                        <i class="fas fa-lock">&nbsp;&nbsp;&nbsp;</i>How does HashAPP&trade; protect my data?
                                     </button>
                                 </h3>
                                 <div id="dataSecurity" class="accordion-collapse collapse">
@@ -401,7 +597,7 @@ hashapp@thedabcorner.site
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#communitysharing">
-                                        <i class="fas fa-users-gear">&nbsp;</i> What is "community sharing"? How does it revolutionize hashmaking?
+                                        <i class="fas fa-users-gear">&nbsp;&nbsp;&nbsp;</i> What is "community sharing"? How does it revolutionize hashmaking?
                                     </button>
                                 </h3>
                                 <div id="communitysharing" class="accordion-collapse collapse">
@@ -436,7 +632,7 @@ hashapp@thedabcorner.site
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reportGeneration">
-                                        <i class="fas fa-ranking-star">&nbsp;</i> Can HashAPP&trade; generate reports?
+                                        <i class="fas fa-ranking-star">&nbsp;&nbsp;&nbsp;</i> Can HashAPP&trade; generate reports?
                                     </button>
                                 </h3>
                                 <div id="reportGeneration" class="accordion-collapse collapse">
@@ -448,7 +644,7 @@ hashapp@thedabcorner.site
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dataMigration">
-                                        <i class="fas fa-truck-ramp-box">&nbsp;</i>Can I migrate my data from another platform to HashAPP&trade;?
+                                        <i class="fas fa-truck-ramp-box">&nbsp;&nbsp;&nbsp;</i>Can I migrate my data from another platform to HashAPP&trade;?
                                     </button>
                                 </h3>
                                 <div id="dataMigration" class="accordion-collapse collapse">
@@ -462,7 +658,7 @@ hashapp@thedabcorner.site
                                 <div class="accordion-item">
                                     <h3 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pricingExplanation">
-                                            <i class="fas fa-money-bill">&nbsp;</i>Why isn't HashAPP™ free, and how can I try it?
+                                            <i class="fas fa-money-bill">&nbsp;&nbsp;&nbsp;</i>Why isn't HashAPP™ free, and how can I try it?
                                         </button>
                                     </h3>
                                     <div id="pricingExplanation" class="accordion-collapse collapse">
@@ -484,7 +680,7 @@ hashapp@thedabcorner.site
                                 <div class="accordion-item">
                                     <h3 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#releaseDate">
-                                            <i class="fas fa-calendar-days">&nbsp;</i>When's the release date?
+                                            <i class="fas fa-calendar-days">&nbsp;&nbsp;&nbsp;</i>When's the release date?
                                         </button>
                                     </h3>
                                     <div id="releaseDate" class="accordion-collapse collapse">
@@ -501,7 +697,7 @@ hashapp@thedabcorner.site
                                 <div class="accordion-item">
                                     <h3 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#appStore">
-                                            <i class="fa-brands fa-app-store-ios">&nbsp;</i>Are you in the App Store?
+                                            <i class="fa-brands fa-app-store-ios">&nbsp;&nbsp;&nbsp;</i>Are you in the App Store?
                                         </button>
                                     </h3>
                                     <div id="appStore" class="accordion-collapse collapse">
@@ -518,28 +714,6 @@ hashapp@thedabcorner.site
                 </div>
             </div>
         </section>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const accordionItems = document.querySelectorAll('.accordion-item');
-
-                accordionItems.forEach(item => {
-                    const button = item.querySelector('.accordion-button');
-                    button.addEventListener('click', function () {
-                        accordionItems.forEach(i => {
-                            if (i !== item) {
-                                const collapse = i.querySelector('.accordion-collapse');
-                                const collapseInstance = new bootstrap.Collapse(collapse, {
-                                    toggle: false
-                                });
-                                collapseInstance.hide();
-                            }
-                        });
-                    });
-                });
-            });
-
-        </script>
 
 
         <section class="py-5 border-bottom" id="features2">
@@ -856,32 +1030,67 @@ hashapp@thedabcorner.site
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                const accordionItems = document.querySelectorAll('.accordion-item');
+                const accordionContainer = document.querySelector('#hashappFAQ');
+                const accordionItems = accordionContainer.querySelectorAll('.accordion-item');
 
-                accordionItems.forEach((item, index) => {
-                    const button = item.querySelector('.accordion-button');
-                    item.id = `accordion-item-${index}`;
+                accordionContainer.addEventListener('click', function (e) {
+                    const button = e.target.closest('.accordion-button');
+                    if (!button) return;
 
-                    button.addEventListener('click', function () {
-                        accordionItems.forEach(i => {
-                            if (i !== item) {
-                                const collapse = i.querySelector('.accordion-collapse');
-                                const collapseInstance = new bootstrap.Collapse(collapse, {
-                                    toggle: false
-                                });
-                                collapseInstance.hide();
-                            }
-                        });
+                    const item = button.closest('.accordion-item');
+                    const collapse = item.querySelector('.accordion-collapse');
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-                        // Scroll to the selected accordion item
-                        setTimeout(() => {
-                            const scrollToItem = document.getElementById(`accordion-item-${index}`);
-                            scrollToItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }, 300); // Delay to wait for the collapse animation to complete
+                    // Toggle the clicked item
+                    toggleAccordionItem(button, collapse, !isExpanded);
+
+                    // Close other items
+                    accordionItems.forEach(i => {
+                        if (i !== item) {
+                            const otherButton = i.querySelector('.accordion-button');
+                            const otherCollapse = i.querySelector('.accordion-collapse');
+                            toggleAccordionItem(otherButton, otherCollapse, false);
+                        }
                     });
+
+                    // Scroll into view
+                    if (!isExpanded) {
+                        scrollToView(item);
+                    }
                 });
+
+                function toggleAccordionItem(button, collapse, show) {
+                    const collapseInstance = new bootstrap.Collapse(collapse, { toggle: false });
+                    button.setAttribute('aria-expanded', show);
+                    button.classList.toggle('collapsed', !show);
+                    collapse.classList.toggle('collapsed', !show);
+
+                    if (show) {
+                        collapseInstance.show();
+                    } else {
+                        collapseInstance.hide();
+                    }
+                }
+
+                function scrollToView(element) {
+                    const headerOffset = 60; // Adjust based on your header height
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         </script>
+
+
+        <style>
+            .accordion-button::after {
+                filter: brightness(0) invert(1);
+            }
+        </style>
 
 
 
