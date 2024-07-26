@@ -1,4 +1,20 @@
 commit_log:
+  - date: "2024-07-25"
+    title: "v0.0.7.6a"
+    description: |
+      - Redesigned workflow: dried hash now moved to product inventory; pressing redefined as a post-processing step to enhance tracking across wash batches.
+      - Implemented product inventory with designed inventory item cards.
+      - Added dynamic product type notation, including "LIVE," "CURED," and "ZOMBIE."
+      - Initiated implementation of product barcodes.
+      - Enhanced sidebar for a more intuitive design: auto-closing trees, added post-processing category, renamed batch tracker to "Wash Tracker."
+      - Added sidebar item icons to page content section headers.
+      - Began redesigning batch model to wash_batch_model.
+      - Removed server session invalidation flag in init.
+      - Improved navigation search functionality, redirecting to search.html and issuing queries through ?q=.
+      - Modified washBagSelector to use Bootstrap 5 toggleswitches.
+      - Implemented batch_inventory_summary.
+      - Began redesign of manage-batch.html to include process summaries and list batches.
+
 
   - date: "2024-07-20"
     title: "v0.0.7.53a"
